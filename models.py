@@ -7,9 +7,9 @@ from database import Base
 def generate_random_id():
     return random.randint(1, 99999999999)
 
-class valor(Base):
-    __tablename__ = "valores"
+class Valor(Base):
+    __tablename__ = "learningorm"
 
     id = Column(Integer, primary_key=True, index=True, default=generate_random_id)
-    nome = Column(String, index=True, nullable=False)
+    Valor = Column(String, index=True, nullable=False)
 

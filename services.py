@@ -1,14 +1,13 @@
 from database import SessionLocal
-from models import valor
+from models import Valor
 
 def salvar_valor(valor_input):
     db = SessionLocal()
     try:
-        new_value = valor_input
-        db.add(new_value)
+        novo = Valor(valor=valor_input)
+        db.add(novo)
         db.commit()
-        db.refresh(new_value)
-        return new_value
+        db.refresh(novo)
+        return novo
     finally:
         db.close()
-
