@@ -10,6 +10,6 @@ def generate_random_id():
 class Valor(Base):
     __tablename__ = "learningorm"
 
-    id = Column(Integer, primary_key=True, index=True, default=generate_random_id)
-    Valor = Column(String, index=True, nullable=False)
+    id = Column(Integer, primary_key=True, index=True, default=generate_random_id())
+    valor = Column(String, nullable=False)
 
