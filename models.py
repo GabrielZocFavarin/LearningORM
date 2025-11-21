@@ -5,7 +5,7 @@ import random
 from database import Base
 
 def generate_random_id():
-    return random.randint(1, 99999999999)
+    return random.randint(1, 9999)
 
 class Valor(Base):
     __tablename__ = "learningorm"
